@@ -162,13 +162,6 @@ h1, h2, h3, h4, h5, h6, strong {
     padding: 20px;
 }
 
-/*
-.mobile .box {
-    overflow: hidden;
-    overflow-x: hidden;
-}
-*/
-
     .box .caption {
         position: relative;
         
@@ -186,6 +179,9 @@ h1, h2, h3, h4, h5, h6, strong {
         }
     
     .box .left {}
+    .mobile .box .left {
+        overflow: hidden;
+    }
         .box .left p {
             margin: 15px 0 35px 0;
         }
@@ -254,6 +250,9 @@ h1, h2, h3, h4, h5, h6, strong {
     
     .box .right {
         position: relative;
+    }
+    .mobile .box .right {
+        overflow: hidden;
     }
         .box .right .phone {
             width: 250px;
@@ -387,8 +386,7 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 
 .right .owl-theme .owl-controls .owl-buttons {
-    left: -45px;
-    right: -54px;
+    display: none;
 }
 
 
@@ -455,6 +453,7 @@ h1, h2, h3, h4, h5, h6, strong {
         }
 
     .right .owl-theme .owl-controls .owl-buttons {
+        display: block;
         left: -60px;
         right: -65px;
     }
