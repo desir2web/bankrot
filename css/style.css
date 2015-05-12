@@ -391,6 +391,7 @@ h1, h2, h3, h4, h5, h6, strong {
 
 
 
+
 /* fixes */
 
 .gecko {
@@ -402,6 +403,14 @@ h1, h2, h3, h4, h5, h6, strong {
 .mobile {
 }
 
+
+
+.video {
+    display: none;
+}
+.slide-0 {
+    background: url(../video/video.jpg);
+}
 
 
 /* media */
@@ -456,6 +465,10 @@ h1, h2, h3, h4, h5, h6, strong {
         display: block;
         left: -60px;
         right: -65px;
+    }
+
+    .video {
+        display: block;
     }
 
 }
