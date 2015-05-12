@@ -1,0 +1,16 @@
+@-webkit-keyframes sample {
+    0% { left: 10px }
+    100% { left: 20px }
+}
+@-moz-keyframes sample {
+    0% { left: 10px }
+    100% { left: 20px }
+}
+@-o-keyframes sample {
+    0% { left: 10px }
+    100% { left: 20px }
+}
+@keyframes sample {
+    0% { left: 10px }
+    100% { left: 20px }
+}
