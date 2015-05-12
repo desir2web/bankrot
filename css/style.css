@@ -162,10 +162,12 @@ h1, h2, h3, h4, h5, h6, strong {
     padding: 20px;
 }
 
+/*
 .mobile .box {
     overflow: hidden;
     overflow-x: hidden;
 }
+*/
 
     .box .caption {
         position: relative;
