@@ -85,5 +85,11 @@ $(document).ready(function(){
     $('.closePopup').on('click',function(){
         $('.popup').removeClass('active');
     });
+    
+    //prevent #notify clicking
+    
+    $('#notify').on('click',function(e){
+        e.preventDefault(); 
+    });
 
 });
