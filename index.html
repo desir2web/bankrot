@@ -98,10 +98,10 @@
                         <span>прямо у вас в телефоне!</span>
                     </p>
                     
-                    <form action="#">
+                    <form action="email.php" method="post" class="form" id="order">
                         
                         <div class="check">
-                            <input type="checkbox" id="notify" checked>
+                            <input name="checkbox" value="Хочет получить уведомление на почту, когда приложение будет доступно для скачивания" type="checkbox" id="notify" checked>
                             <label for="notify">
                                 Да, я хочу получить уведомление на мой адрес
                                 электронной почты, когда можно будет скачать
@@ -109,17 +109,17 @@
                             </label>
                         </div>
                         
-                        <input type="email" placeholder="Email">
+                        <input name="email" type="email" placeholder="Email" class="requered">
                         
                         <div class="check">
-                            <input type="checkbox" id="beta">
+                            <input name="checkbox" value="Хочет участвовать в бета-тестировании" type="checkbox" id="beta" checked>
                             <label for="beta">
                                 Да, я хочу участвовать в бета-тестировании приложения
                             </label>
                         </div>
                         
                         <div class="check">
-                            <input type="checkbox" id="partner">
+                            <input name="checkbox" value="Хочет стать партнёром" type="checkbox" id="partner">
                             <label for="partner">
                                 Я активный участник рынка банкротств и обучаю других
                                 приёмам работы на нём. Мне интересно узнать о выгодах
@@ -127,23 +127,22 @@
                             </label>
                         </div>
                         
-                        <a href="#" class="btn send">Отправить</a>
+                        <a href="#" class="btn submit">Отправить</a>
                         
                     </form>
                 </div>
                 <div class="right">
                     <div class="phone">
                         <div class="slider">
+<!--
                             <div class="slide slide-0">
                                 <video class="video" autoplay controls poster="video/video.jpg">
                                     <source src="video/video.mp4" type="video/mp4">
-<!--
                                     <source src="video/video.webm" type="video/webm">
                                     <source src="video/video.ogv" type="video/ogv">
--->
                                 </video>
-<!--                                <div class="play hidden"></div>-->
                             </div>
+-->
                             <div class="slide slide-1">
                                 <a href="#"><img src="img/slide.jpg" alt=""></a>
                             </div>
@@ -168,31 +167,31 @@
                         </div>
                         <div class="hints">
                             <div class="hint" id="hint-1">
-                                Экран настроек поиска
+                                Удобный поиск по самым важным критериям
                                 <div class="tail"></div>
                             </div>
                             <div class="hint" id="hint-2">
-                                Результаты поиска: компактный список лотов
+                                Просмотр найденных лотов списком без лишних подробностей
                                 <div class="tail"></div>
                             </div>
                             <div class="hint" id="hint-3">
-                                Результаты поиска: подробная карточка лота
+                                Полная информация о лоте в&nbsp;подробной карточке
                                 <div class="tail"></div>
                             </div>
                             <div class="hint" id="hint-4">
-                                Результаты поиска: подробная карточка лота: раздел документов
+                                Загрузка всех связанных документов
                                 <div class="tail"></div>
                             </div>
                             <div class="hint" id="hint-5">
-                                Загрузка документа
+                                Договор задатка и акт оценки открываются прямо на телефоне
                                 <div class="tail"></div>
                             </div>
                             <div class="hint" id="hint-6">
-                                Экран моих лотов
+                                Возможность мониторинга отобранных лотов с получением уведомлений об обновлениях информации на ЭТП
                                 <div class="tail"></div>
                             </div>
                             <div class="hint" id="hint-7">
-                                Экран выгрузки из подробной карточки лота с выбором способа экспорта
+                                Экспорт данных в документ или на&nbsp;email
                                 <div class="tail"></div>
                             </div>
                         </div>
@@ -203,6 +202,13 @@
             </div>
 
         </div>
+        </div>
+        
+        <div class="popup closePopup">
+            <div class="popup-box">
+                <p>Большое спасибо за интерес, проявленный к нашему продукту. Теперь мы будем держать вас в&nbsp;курсе!</p>
+                <a href="#" class="btn closePopup">ОК</a>
+            </div>
         </div>
         
 	</body>
