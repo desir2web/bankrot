@@ -373,6 +373,7 @@ h1, h2, h3, h4, h5, h6, strong {
         top: 100%;
         left: 50%;
         margin: 20px 0 0 -60px;
+        padding: 0 0 20px 0;
     }
 
 
@@ -411,17 +412,18 @@ h1, h2, h3, h4, h5, h6, strong {
     }
     .popup .popup-box {
         position: absolute;
-        width: 300px;
-        height: 170px;
         background: #fff;
         border-radius: 5px;
-        margin: -115px -190px;
         padding: 30px 40px;
         top: 50%;
         left: 50%;
         text-align: center;
         font-size: 16px;
         box-shadow: 0 10px 15px rgba(0,0,0,.15);
+        
+        width: 200px;
+        height: 230px;
+        margin: -115px -140px;
     }
         .popup .popup-box p {
             padding: 0 0 20px 0;
@@ -485,6 +487,12 @@ h1, h2, h3, h4, h5, h6, strong {
             .box .right .phone {
                 margin: 0;
             }
+    
+    .popup .popup-box {
+        width: 300px;
+        height: 170px;
+        margin: -115px -190px;
+    }
 
 }
 
