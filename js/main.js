@@ -57,8 +57,7 @@ $(document).ready(function(){
     
     //mail
     
-    $('.submit').on('click', function(e) {
-        e.preventDefault();
+    function postForm() {
         $('.requered').each(function() {
             if(!$(this).val().length) {
                 $(this).css('border', '#e02525 2px solid');
@@ -78,6 +77,16 @@ $(document).ready(function(){
                 
             }
         });
+    }
+    
+    $('.submit').on('click', function(e) {
+        e.preventDefault();
+        postForm();
+    });
+    
+    $('#order').on('submit',function(e){
+        e.preventDefault();
+        postForm();
     });
     
     //popup
