@@ -50,23 +50,24 @@ EOD;
 $mail = new PHPMailer;
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.crocotrip.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'delovitarf@yandex.ru';                 // SMTP username
-$mail->Password = 'frdelov';                           // SMTP password
+$mail->Username = 'hello@crocotrip.com';                 // SMTP username
+$mail->Password = 'hello4croco123';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 
 $mail->CharSet = 'UTF-8';
 
-$mail->From = 'delovitarf@yandex.ru';
-$mail->FromName = 'Delovita';
-$mail->addAddress('desir.web@gmail.com');              // Name is optional
-$mail->addReplyTo('delovitarf@yandex.ru', 'Delovita');
+$mail->From = 'hello@crocotrip.com';
+$mail->FromName = 'Crocotrip';
+$mail->addAddress($contact);              // Name is optional
+$mail->addReplyTo('hello@crocotrip.com', 'Crocotrip');
 
+$mail->addAttachment($pdf);    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Delovita';
+$mail->Subject = 'Crocotrip';
 $mail->Body    = $message;
 
 $mail->setLanguage('ru', '/language/');
