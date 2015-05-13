@@ -6,6 +6,7 @@ require 'phpmailer/PHPMailerAutoload.php';
 
 $email = $_POST['email'];
 $checkbox = $_POST['checkbox'];
+$checked = '';
     if(empty($checkbox)) 
         {
             $checked = 'Ничего не хочет';
@@ -15,7 +16,7 @@ $checkbox = $_POST['checkbox'];
             $N = count($checkbox);
             for($i=0; $i < $N; $i++)
             {
-              $checked = '<li>'.$checkbox[$i].'</li>';
+              $checked .= '<li>'.$checkbox[$i].'</li>';
             }
         }
 
@@ -49,24 +50,23 @@ EOD;
 $mail = new PHPMailer;
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.crocotrip.com';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'hello@crocotrip.com';                 // SMTP username
-$mail->Password = 'hello4croco123';                           // SMTP password
+$mail->Username = 'delovitarf@yandex.ru';                 // SMTP username
+$mail->Password = 'frdelov';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 
 $mail->CharSet = 'UTF-8';
 
-$mail->From = 'hello@crocotrip.com';
-$mail->FromName = 'Crocotrip';
+$mail->From = 'delovitarf@yandex.ru';
+$mail->FromName = 'Delovita';
 $mail->addAddress('desir.web@gmail.com');              // Name is optional
-$mail->addReplyTo('hello@crocotrip.com', 'Crocotrip');
+$mail->addReplyTo('delovitarf@yandex.ru', 'Delovita');
 
-$mail->addAttachment($pdf);    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Новая заявка с лендинга банкрота';
+$mail->Subject = 'Delovita';
 $mail->Body    = $message;
 
 $mail->setLanguage('ru', '/language/');

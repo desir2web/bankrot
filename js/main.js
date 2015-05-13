@@ -82,7 +82,8 @@ $(document).ready(function(){
     
     //popup
     
-    $('.closePopup').on('click',function(){
+    $('.closePopup').on('click',function(e){
+        e.preventDefault();
         $('.popup').removeClass('active');
     });
     
