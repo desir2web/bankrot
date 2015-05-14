@@ -67,6 +67,7 @@ $(document).ready(function(){
                 if(pattern.test($(this).val())) {
                     $.post( "email.php", $( "#order" ).serialize() );
                     $('.popup').addClass('active');
+                    $('.closePopup').focus();
                 } else {
                     $(this).css('border', '#e02525 2px solid');
                 }
